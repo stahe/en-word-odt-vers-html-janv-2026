@@ -610,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hosting-the-html-site-on-github.html" class="md-nav__link">
+      <a href="hosting-the-html-site-on-github-.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Hosting the HTML site on GitHub
+    12. Hosting the HTML site on GitHub 
   
 
     
@@ -701,52 +701,46 @@
 
 
 
-<h1 id="10-building-the-static-html-site">10. <span>Building the static HTML site</span></h1>
-<ul>
-<li><span>From now on, there are no longer any </span><span>differences </span><span>between ODT and DOCX documents. We work on the MkDocs site built by either converter.</span></li>
-<li><span>Now let’s build the HTML site. This is done using the &#91;build&#93; script. Still in the terminal, type the following command:</span>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="font-weight:bold;background-color:#FFF5CE">python .\build.py</span></span>
-<span class="docx-code-line">Starting to build the MkDocs site...</span>
-<span class="docx-code-line">Build successful! The site is located at: C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site</span>
-<span class="docx-code-line">Opening C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site\index.html in the browser…</span>
+<h1 id="10-building-the-static-html-site">10. <span style="color: #0f4761">Building the static HTML site</span></h1>
+<p>From now on, there are no longer any differences between ODT and DOCX documents. We work on the MkDocs site built by either converter.</p>
+<p>Now let’s build the HTML site. This is done using the [build] script. Still in the terminal, type the following command:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="font-weight:bold;background-color:#fff5ce">python .\build.py</span></span>
+<span class="odt-code-line">Starting to build the MkDocs site...</span>
+<span class="odt-code-line">Build successful! The site is located at: C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site</span>
+<span class="odt-code-line">Opening C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site\index.html in the browser…</span>
 </code></pre></div>
 
-</li>
-<li><span>line 1: the &#91;python build&#93; command creates the HTML site from the MkDocs site;</span></li>
-<li><span>line 4: the site is displayed in a browser;</span></li>
+<ul>
+  <li>line 1: the [python build] command creates the HTML site from the MkDocs site;
+  </li>
+  <li>line 4: the site is displayed in a browser;
+  </li>
 </ul>
 
-<p><span>The result is the same as for the MkDocs site:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image24.png" class="docx-zoomable" style="width:605px;height:338px;" alt="Image" />
-</td>
-</tr>
-</table>
+<p>The result is the same as for the MkDocs site:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000A7C000005DEBDC606C9.png" style="display:inline-block; margin:4px;width:16.002cm;height:8.939cm;" class="odt-zoomable" data-zoom-src="images/1000000000000A7C000005DEBDC606C9.png" /></td></tr></table>
 
 <ul>
-<li><span>In &#91;1&#93;, we can see that an HTML page is being displayed;</span></li>
-<li><span>In &#91;2&#93;, this page corresponds to the site’s home page;</span></li>
-<li><span>In &#91;3&#93;, the table of contents for the HTML document;</span></li>
-<li><span>In &#91;4&#93;, the document title has been formatted according to its configuration in &#91;config.py&#93;;</span></li>
-<li><span>In &#91;5&#93;, the first page displayed is &#91;Home&#93;. The content of this page is the content of the ODT/DOCX document </span><b>preceding the first Chapter 1-level chapter</b><span>;</span></li>
+  <li>In [1], we can see that an HTML page is being displayed;
+  </li>
+  <li>In [2], this page corresponds to the site’s home page;
+  </li>
+  <li>In [3], the table of contents for the HTML document;
+  </li>
+  <li>In [4], the document title has been formatted according to its configuration in [config.py];
+  </li>
+  <li>In [5], the first page displayed is [Home]. The content of this page is the content of the ODT/DOCX document <b>preceding the first Chapter 1-level chapter</b>;
+  </li>
 </ul>
 
-<p><span>Running &#91;build&#93; has modified your working directory:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image25.png" class="docx-zoomable" style="width:298px;height:291px;" alt="Image" />
-</td>
-</tr>
-</table>
+<p>Running [build] has modified your working directory:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000353000003409C8A1BF2.png" style="display:inline-block; margin:4px;width:7.879cm;height:7.699cm;" class="odt-zoomable" data-zoom-src="images/1000000000000353000003409C8A1BF2.png" /></td></tr></table>
 
 <ul>
-<li><span>In &#91;1&#93;, a new &#91;site&#93; folder has been created. It contains your static HTML site;</span></li>
-<li><span>In &#91;2&#93;, the pages of your site;</span></li>
-</ul>
+  <li>In [1], a new [site] folder has been created. It contains your static HTML site;
+  </li>
+  <li>In [2], the pages of your site;
 
 
 

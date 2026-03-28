@@ -610,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hosting-the-html-site-on-github.html" class="md-nav__link">
+      <a href="hosting-the-html-site-on-github-.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Hosting the HTML site on GitHub
+    12. Hosting the HTML site on GitHub 
   
 
     
@@ -701,81 +701,82 @@
 
 
 
-<h1 id="9-using-the-docx-html-converter">9. <span>Using the DOCX → HTML Converter</span></h1>
-<p><span>The command for converting a Word DOCX document is very similar to that for converting a LibreOffice ODT document. We will modify the document title style in &#91;config.py&#93;:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-markdown">
-<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
-<span class="docx-code-line"><span style="color:#000000">    </span># Document Title Detection</span>
-<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;document_title&quot;<span style="color:#000000">: {</span></span>
-<span class="docx-code-line"><span style="color:#000000">        </span># ODT styles to be considered as the main document title (global H1)</span>
-<span class="docx-code-line"><span style="color:#000000">        </span>&quot;style_names&quot;<span style="color:#000000">: [</span></span>
-<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">Title</span><span style="color:#A31515">&quot;</span></span>
-<span class="docx-code-line">        ],</span>
-<span class="docx-code-line"><span style="color:#000000">        </span># CSS applied to this title in the generated Markdown</span>
-<span class="docx-code-line"><span style="color:#000000">        </span>&quot;css&quot;<span style="color:#000000">: </span>&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span>
-<span class="docx-code-line">    },</span>
+<h1 id="9-using-the-docx-html-converter">9. <span style="color: #0f4761">Using the DOCX → HTML Converter</span></h1>
+<p>The command for converting a Word DOCX document is very similar to that for converting a LibreOffice ODT document. We will modify the document title style in [config.py]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
+<span class="odt-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="odt-code-line"><span style="color:#000000">    </span># Document Title Detection</span>
+<span class="odt-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;document_title&quot;<span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span># ODT styles to be considered as the main document title (global H1)</span>
+<span class="odt-code-line"><span style="color:#000000">        </span>&quot;style_names&quot;<span style="color:#000000">: [</span></span>
+<span class="odt-code-line">            <span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">Title</span><span style="color:#a31515">&quot;</span></span>
+<span class="odt-code-line">        ],</span>
+<span class="odt-code-line"><span style="color:#000000">        </span># CSS applied to this title in the generated Markdown</span>
+<span class="odt-code-line"><span style="color:#000000">        </span>&quot;css&quot;<span style="color:#000000">: </span>&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span>
+<span class="odt-code-line">    },</span>
 </code></pre></div>
 
 <ul>
-<li><span>Line 7: Enter ‘Title’. This is the style of the DOCX document you are going to convert. We’ll see this in the converter’s debug logs.</span></li>
+  <li>Line 7: Enter ‘Title’. This is the style of the DOCX document you are going to convert. We’ll see this in the converter’s debug logs.
+  </li>
 </ul>
 
-<p><span>Still in the PyCharm terminal, type the following command:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
-<span class="docx-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="background-color:#FFF5CE">python .\convert_docx_v18.py .\word-odt-to-html-jan-2026.docx .\config.py</span></span>
-<span class="docx-code-line">C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2\convert_docx_v18.py:976: SyntaxWarning: invalid escape sequence &#x27;\h&#x27;</span>
-<span class="docx-code-line">  - REF Bookmark \h</span>
-<span class="docx-code-line">--- DOCX to MkDocs Converter V16 ---</span>
-<span class="docx-code-line"><span style="background-color:#FFF5CE">Copied</span>: google5179c0eaff293e02.html</span>
-<span class="docx-code-line"><span style="background-color:#FFF5CE">Copied</span>: robots.txt</span>
-<span class="docx-code-line"><span style="background-color:#FFF5CE">Copied</span>: word-odt-to-html-jan-2026.pdf</span>
-<span class="docx-code-line"><span style="background-color:#FFF5CE">Copied</span>: word-odt-to-html-jan-2026.zip</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] <span style="background-color:#FFF5CE">style=Title </span>heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;span&gt;<span style="background-color:#FFF5CE">Convert a Word or ODT document to a Mk-compatible static HTML site</span>...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;b&gt;Serge Tahé&lt;/b&gt;&lt;span&gt;, January 2026&lt;/span&gt;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;B&gt;This site was created using the &#x27;Word or ODT - &amp;gt; HTML&#x27; converter...&#x27;</span>
-<span class="docx-code-line">[DEBUG PRE-H1] style=Title1 heading=1 rebase=0 numId=1 ilvl=0 list=numPr:1/ordered txt=&#x27;&lt;span&gt;Introduction&lt;/span&gt;...&#x27;</span>
-<span class="docx-code-line">Done. (audit.json, audit.txt, report.txt generated)</span>
+<p>Still in the PyCharm terminal, type the following command:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="background-color:#fff5ce">python .\convert_docx_v18.py .\word-odt-to-html-jan-2026.docx .\config.py</span></span>
+<span class="odt-code-line">C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2\convert_docx_v18.py:976: SyntaxWarning: invalid escape sequence &#x27;\h&#x27;</span>
+<span class="odt-code-line">  - REF Bookmark \h</span>
+<span class="odt-code-line">--- DOCX to MkDocs Converter V16 ---</span>
+<span class="odt-code-line"><span style="background-color:#fff5ce">Copied</span>: google5179c0eaff293e02.html</span>
+<span class="odt-code-line"><span style="background-color:#fff5ce">Copied</span>: robots.txt</span>
+<span class="odt-code-line"><span style="background-color:#fff5ce">Copied</span>: word-odt-to-html-jan-2026.pdf</span>
+<span class="odt-code-line"><span style="background-color:#fff5ce">Copied</span>: word-odt-to-html-jan-2026.zip</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] <span style="background-color:#fff5ce">style=Title </span>heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;span&gt;<span style="background-color:#fff5ce">Convert a Word or ODT document to a Mk-compatible static HTML site</span>...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;b&gt;Serge Tahé&lt;/b&gt;&lt;span&gt;, January 2026&lt;/span&gt;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Standard heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=StandardWW heading=None rebase=0 numId=None ilvl=None list=None:0/None txt=&#x27;&lt;B&gt;This site was created using the &#x27;Word or ODT - &amp;gt; HTML&#x27; converter...&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] style=Title1 heading=1 rebase=0 numId=1 ilvl=0 list=numPr:1/ordered txt=&#x27;&lt;span&gt;Introduction&lt;/span&gt;...&#x27;</span>
+<span class="odt-code-line">Done. (audit.json, audit.txt, report.txt generated)</span>
 </code></pre></div>
 
 <ul>
-<li><span>line 1: the command is as follows: &#91;</span><b>python .\convert&#95;docx&#95;v18.py .\word-odt-to-html-jan-2026.docx .\config.py</b><span>&#93;</span><span>. (Adjust the version number (here 18) to the version you downloaded.)</span><span>:</span><ul>
-<li><span>the first parameter &#91;</span><b>.\convert&#95;docx&#95;v18.py</b><span>&#93; is the DOCX → HTML converter</span></li>
-<li><span>the second parameter &#91;</span><b>.\word-odt-to-html-jan-2026.docx</b><span>&#93; is the name of the DOCX document to be converted;</span></li>
-<li><span>the third parameter &#91;</span><b>.\config.py</b><span>&#93; is the configuration file;</span></li>
+  <li>line 1: the command is as follows: [<b>python .\convert_docx_v18.py .\word-odt-to-html-jan-2026.docx .\config.py</b>]. (Adjust the version number (here 18) to the version you downloaded.):
+    <ul>
+      <li>the first parameter [<b>.\convert_docx_v18.py</b>] is the DOCX → HTML converter
+      </li>
+      <li>the second parameter [<b>.\word-odt-to-html-jan-2026.docx</b>] is the name of the DOCX document to be converted;
+      </li>
+      <li>the third parameter [<b>.\config.py</b>] is the configuration file;
+      </li>
+    </ul>
+  </li>
+  <li>Line 33: The converter reports that three files have been generated:
+  </li>
 </ul>
-</li>
-<li><span>Line 33: The converter reports that three files have been generated:</span></li>
-</ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image22.png" class="docx-zoomable" style="width:402px;height:502px;" alt="Image" />
-</td>
-</tr>
-</table>
 
-<p><span>The &#91;audit.txt&#93; file is as follows:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000324000003ECA9D639E7.png" style="display:inline-block; margin:4px;width:10.64cm;height:13.28cm;" class="odt-zoomable" data-zoom-src="images/1000000000000324000003ECA9D639E7.png" /></td></tr></table>
+
+<p>The [audit.txt] file is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -829,91 +830,97 @@
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a>  - Not recognized: 0
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span>line 2: the number of paragraphs in the Word document;</span></li>
-<li><span>line 3: the number of tables;</span></li>
-<li><span>lines 9–21: the styles found in the document;</span><ul>
-<li><span>lines 10, 14, 15: the style of the code blocks. A single style would probably have sufficed;</span></li>
-<li><span>lines 11–12, 19: the style of standard paragraphs. A single style would probably have sufficed;</span></li>
-<li><span>lines 16–18, 21: the styles of the document’s headings. On line 21, we see that only one paragraph has the “Heading” style. This is the document title that precedes the first “Heading 1”;</span></li>
-</ul>
-</li>
+  <li>line 2: the number of paragraphs in the Word document;
+  </li>
+  <li>line 3: the number of tables;
+  </li>
+  <li>lines 9–21: the styles found in the document;
+    <ul>
+      <li>lines 10, 14, 15: the style of the code blocks. A single style would probably have sufficed;
+      </li>
+      <li>lines 11–12, 19: the style of standard paragraphs. A single style would probably have sufficed;
+      </li>
+      <li>lines 16–18, 21: the styles of the document’s headings. On line 21, we see that only one paragraph has the “Heading” style. This is the document title that precedes the first “Heading 1”;
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>This audit of the Word document is a good way to assess the document’s quality. Here I can see that I used too many different styles for the same thing in my Word document.</span></p>
-<p><span>The &#91;audit.json&#93; file is identical to the &#91;audit.txt&#93; file but in JSON format:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">{</span>
-<span class="docx-code-line"><span style="color:#000000">  </span>&quot;version&quot;<span style="color:#000000">: </span><span style="color:#A31515">&quot;V16&quot;</span><span style="color:#000000">,</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#2E75B6">&quot;file&quot;</span><span style="color:#000000">: </span>&quot;word-odt-to-html-jan-2026.docx&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span>&quot;counts&quot;<span style="color:#000000">: {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;paragraphs&quot;<span style="color:#000000">: 2029,</span></span>
-<span class="docx-code-line">    <span style="color:#2E75B6">&quot;tables&quot;</span>: 97,</span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;image_blips&quot;<span style="color:#000000">: 2,</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;headings_raw&quot;<span style="color:#000000">: 53</span></span>
-<span class="docx-code-line">  },</span>
-<span class="docx-code-line"><span style="color:#000000">  </span>&quot;lists&quot;<span style="color:#000000">: {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;with_numpr&quot;<span style="color:#000000">: 1329,</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;by_style&quot;<span style="color:#000000">: 49,</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;unrecognized&quot;<span style="color:#000000">: 0</span></span>
-<span class="docx-code-line">  },</span>
-<span class="docx-code-line"><span style="color:#000000">  </span>&quot;heading&quot;<span style="color:#000000">: {</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;min_level_raw&quot;<span style="color:#000000">: 1,</span></span>
-<span class="docx-code-line"><span style="color:#000000">    </span>&quot;rebase_offset&quot;<span style="color:#000000">: 0</span></span>
-<span class="docx-code-line">  },</span>
-<span class="docx-code-line"><span style="color:#000000">  </span>&quot;top_styles&quot;<span style="color:#000000">: [</span></span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;SourceCodenumrot&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      1054</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;StandardWW&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      594</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;Standard&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      146</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;ListParagraph&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      113</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;SourceCodeNumberResults&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      33</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;newcode&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      28</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;Title2&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      25</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;Title1&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      14</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;Title3&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      14</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;StandardWWWW&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      6</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line"><span style="color:#000000">      </span>&quot;Plain text&quot;<span style="color:#000000">,</span></span>
-<span class="docx-code-line">      1</span>
-<span class="docx-code-line">    ],</span>
-<span class="docx-code-line">    [</span>
-<span class="docx-code-line">      <span style="color:#A31515">&quot;Title&quot;</span>,</span>
-<span class="docx-code-line">      1</span>
-<span class="docx-code-line">    ]</span>
-<span class="docx-code-line">  ]</span>
-<span class="docx-code-line">}</span>
+<p>This audit of the Word document is a good way to assess the document’s quality. Here I can see that I used too many different styles for the same thing in my Word document.</p>
+<p>The [audit.json] file is identical to the [audit.txt] file but in JSON format:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">{</span>
+<span class="odt-code-line"><span style="color:#000000">  </span>&quot;version&quot;<span style="color:#000000">: </span><span style="color:#a31515">&quot;V16&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#2e75b6">&quot;file&quot;</span><span style="color:#000000">: </span>&quot;word-odt-to-html-jan-2026.docx&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span>&quot;counts&quot;<span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;paragraphs&quot;<span style="color:#000000">: 2029,</span></span>
+<span class="odt-code-line">    <span style="color:#2e75b6">&quot;tables&quot;</span>: 97,</span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;image_blips&quot;<span style="color:#000000">: 2,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;headings_raw&quot;<span style="color:#000000">: 53</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span>&quot;lists&quot;<span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;with_numpr&quot;<span style="color:#000000">: 1329,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;by_style&quot;<span style="color:#000000">: 49,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;unrecognized&quot;<span style="color:#000000">: 0</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span>&quot;heading&quot;<span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;min_level_raw&quot;<span style="color:#000000">: 1,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span>&quot;rebase_offset&quot;<span style="color:#000000">: 0</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span>&quot;top_styles&quot;<span style="color:#000000">: [</span></span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;SourceCodenumrot&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      1054</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;StandardWW&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      594</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;Standard&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      146</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;ListParagraph&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      113</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;SourceCodeNumberResults&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      33</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;newcode&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      28</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;Title2&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      25</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;Title1&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      14</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;Title3&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      14</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;StandardWWWW&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      6</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line"><span style="color:#000000">      </span>&quot;Plain text&quot;<span style="color:#000000">,</span></span>
+<span class="odt-code-line">      1</span>
+<span class="odt-code-line">    ],</span>
+<span class="odt-code-line">    [</span>
+<span class="odt-code-line">      <span style="color:#a31515">&quot;Title&quot;</span>,</span>
+<span class="odt-code-line">      1</span>
+<span class="odt-code-line">    ]</span>
+<span class="odt-code-line">  ]</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
-<p><span>The &#91;report.txt&#93; file is as follows:</span></p>
+<p>The [report.txt] file is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -924,30 +931,24 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>[SUMMARY] Ignored Word blocks (aggregated)
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>  - &lt;w:sectPr&gt;: 1
 </code></pre></div></td></tr></table></div>
-<p><span>I didn’t understand that…</span></p>
-<p><span>It is possible to request only an audit of the Word document to assess its quality using the &#91;--audit&#93; parameter:</span></p>
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">python .\convert_docx_v18.py .\word-odt-to-html-jan-2026.docx .\config.py <span style="background-color:#FFF5CE">--audit</span></span>
+<p>I didn’t understand that…</p>
+<p>It is possible to request only an audit of the Word document to assess its quality using the [--audit] parameter:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">python .\convert_docx_v18.py .\word-odt-to-html-jan-2026.docx .\config.py <span style="background-color:#fff5ce">--audit</span></span>
 </code></pre></div>
 
-<p><span>In this case, only the document audit is performed. The MkDocs site is not generated.</span></p>
-<p><span>As shown earlier, you can view the MkDocs site generated by the converter:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="background-color:#FFF5CE">python -m mkdocs serve</span></span>
-<span class="docx-code-line">INFO    -  Building documentation...</span>
-<span class="docx-code-line">INFO    -  Cleaning site directory</span>
-<span class="docx-code-line">INFO    -  Documentation built in 0.59 seconds</span>
-<span class="docx-code-line">INFO    -  [06:05:48] Serving on<span style="background-color:#FFF5CE"> http://127.0.0.1:8000/word-odt-vers-html-janv-2026/</span></span>
+<p>In this case, only the document audit is performed. The MkDocs site is not generated.</p>
+<p>As shown earlier, you can view the MkDocs site generated by the converter:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-to-html\v2&gt; <span style="background-color:#fff5ce">python -m mkdocs serve</span></span>
+<span class="odt-code-line">INFO    -  Building documentation...</span>
+<span class="odt-code-line">INFO    -  Cleaning site directory</span>
+<span class="odt-code-line">INFO    -  Documentation built in 0.59 seconds</span>
+<span class="odt-code-line">INFO    -  [06:05:48] Serving on<span style="background-color:#fff5ce"> http://127.0.0.1:8000/word-odt-vers-html-janv-2026/</span></span>
 </code></pre></div>
 
-<p><span>Ctrl-Click on the URL in line 5:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image23.png" class="docx-zoomable" style="width:605px;height:305px;" alt="Image" />
-</td>
-</tr>
-</table>
+<p>Ctrl-Click on the URL in line 5:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000AB10000056368EAE7E8.png" style="display:inline-block; margin:4px;width:16.002cm;height:8.061cm;" class="odt-zoomable" data-zoom-src="images/1000000000000AB10000056368EAE7E8.png" /></td></tr></table>
 
 
 

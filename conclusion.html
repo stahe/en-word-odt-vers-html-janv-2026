@@ -598,14 +598,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hosting-the-html-site-on-github.html" class="md-nav__link">
+      <a href="hosting-the-html-site-on-github-.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Hosting the HTML site on GitHub
+    12. Hosting the HTML site on GitHub 
   
 
     
@@ -699,12 +699,12 @@
 
 
 
-<h1 id="14-conclusion">14. <span>Conclusion</span></h1>
-<p><span>In this document, we have demonstrated a converter that transforms ODT documents created by </span><a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><span>LibreOffice</span></a><span> or DOCX documents from Word into a high-quality static HTML site.</span></p>
-<p><span>In the chapter &#91;</span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html"><span>Examples in this document</span></a><span>&#93;, we presented the structures correctly handled by the Gemini/ChatGPT converter.</span></p>
-<p><span>We have also shown how to export the HTML sites created by the ODT and DOCX converters to GitHub (see the chapter &quot;</span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html"><span>Hosting the HTML Site on GitHub</span></a><span>&quot;)</span></p>
-<p><span>Outside the structures </span><span>outlined in the examples section</span><span>, nothing is guaranteed. It is likely that the converter will produce errors. You will then need to start a new chat with Gemini </span><span>or ChatGPT </span><span>to resolve these errors. </span><span>The simplest approach is to provide the AI with the current converter and its configuration file. Then ask the AI if it understands the code you’ve provided. This forces it to analyze the code. It will always respond that it fully understands the code. That’s when you should ask it for the desired changes. For both Word and LibreOffice, you can assist the AI with macros. The AI cannot “see” the ODT or DOCX document being processed. It therefore lacks certain information. As a result, the DOCX-to-HTML converter couldn’t properly handle the numbering of rich code blocks. It couldn’t read the line number of the first line in a code block to render it in HTML. It always started the code at line 1, even if the code in the DOCX file started at line 12. So I used a macro. I placed the document cursor on the numbered line and asked ChatGPT to generate a VBA macro that would provide it with the characteristics of that line</span><span>, </span><span>enabling it to correctly generate the HTML numbering . ChatGPT did so, and I gave it the result of its macro. That solved the </span><span>problem: the retrieved information showed it that the line number was propagated by its style, not by the numbering icon. It then changed its algorithm, and it worked. So we can help AI move forward.</span></p>
-<p><span>Another, simpler approach is to modify your document. When the converter produces an error, try modifying your document so that it uses only the chapter structures from the examples.</span></p>
+<h1 id="14-conclusion">14. <span style="color: #0f4761">Conclusion</span></h1>
+<p>In this document, we have demonstrated a converter that transforms ODT documents created by <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/">LibreOffice</a> or DOCX documents from Word into a high-quality static HTML site.</p>
+<p>In the chapter [<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html">Examples in this document</a>], we presented the structures correctly handled by the Gemini/ChatGPT converter.</p>
+<p>We have also shown how to export the HTML sites created by the ODT and DOCX converters to GitHub (see the chapter &quot;<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html">Hosting the HTML Site on GitHub</a>&quot;)</p>
+<p>Outside the structures outlined in the examples section, nothing is guaranteed. It is likely that the converter will produce errors. You will then need to start a new chat with Gemini or ChatGPT to resolve these errors. The simplest approach is to provide the AI with the current converter and its configuration file. Then ask the AI if it understands the code you’ve provided. This forces it to analyze the code. It will always respond that it fully understands the code. That’s when you should ask it for the desired changes. For both Word and LibreOffice, you can assist the AI with macros. The AI cannot “see” the ODT or DOCX document being processed. It therefore lacks certain information. As a result, the DOCX-to-HTML converter couldn’t properly handle the numbering of rich code blocks. It couldn’t read the line number of the first line in a code block to render it in HTML. It always started the code at line 1, even if the code in the DOCX file started at line 12. So I used a macro. I placed the document cursor on the numbered line and asked ChatGPT to generate a VBA macro that would provide it with the characteristics of that line, enabling it to correctly generate the HTML numbering . ChatGPT did so, and I gave it the result of its macro. That solved the problem: the retrieved information showed it that the line number was propagated by its style, not by the numbering icon. It then changed its algorithm, and it worked. So we can help AI move forward.</p>
+<p>Another, simpler approach is to modify your document. When the converter produces an error, try modifying your document so that it uses only the chapter structures from the examples.</p>
 
 
 
