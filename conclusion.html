@@ -81,7 +81,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,7 +139,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -149,7 +149,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -328,14 +328,14 @@
   
   
     <li class="md-nav__item">
-      <a href="examples-from-this-document.html" class="md-nav__link">
+      <a href="examples-from-this-document----.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Examples from this document
+    2. Examples from this document    
   
 
     
@@ -362,7 +362,7 @@
   <span class="md-ellipsis">
     
   
-    3. What's available online
+    3. What’s available online
   
 
     
@@ -463,14 +463,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-converters-configuration-file.html" class="md-nav__link">
+      <a href="the-converters-configuration-files.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. The converters’ configuration file
+    7. The converters’ configuration files
   
 
     
@@ -598,14 +598,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hosting-the-html-site-on-github-.html" class="md-nav__link">
+      <a href="hosting-the-html-site-on-github.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Hosting the HTML site on GitHub 
+    12. Hosting the HTML site on GitHub
   
 
     
@@ -700,11 +700,11 @@
 
 
 <h1 id="14-conclusion">14. <span style="color: #0f4761">Conclusion</span></h1>
-<p>In this document, we have demonstrated a converter that transforms ODT documents created by <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/">LibreOffice</a> or DOCX documents from Word into a high-quality static HTML site.</p>
-<p>In the chapter [<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html">Examples in this document</a>], we presented the structures correctly handled by the Gemini/ChatGPT converter.</p>
-<p>We have also shown how to export the HTML sites created by the ODT and DOCX converters to GitHub (see the chapter &quot;<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html">Hosting the HTML Site on GitHub</a>&quot;)</p>
-<p>Outside the structures outlined in the examples section, nothing is guaranteed. It is likely that the converter will produce errors. You will then need to start a new chat with Gemini or ChatGPT to resolve these errors. The simplest approach is to provide the AI with the current converter and its configuration file. Then ask the AI if it understands the code you’ve provided. This forces it to analyze the code. It will always respond that it fully understands the code. That’s when you should ask it for the desired changes. For both Word and LibreOffice, you can assist the AI with macros. The AI cannot “see” the ODT or DOCX document being processed. It therefore lacks certain information. As a result, the DOCX-to-HTML converter couldn’t properly handle the numbering of rich code blocks. It couldn’t read the line number of the first line in a code block to render it in HTML. It always started the code at line 1, even if the code in the DOCX file started at line 12. So I used a macro. I placed the document cursor on the numbered line and asked ChatGPT to generate a VBA macro that would provide it with the characteristics of that line, enabling it to correctly generate the HTML numbering . ChatGPT did so, and I gave it the result of its macro. That solved the problem: the retrieved information showed it that the line number was propagated by its style, not by the numbering icon. It then changed its algorithm, and it worked. So we can help AI move forward.</p>
-<p>Another, simpler approach is to modify your document. When the converter produces an error, try modifying your document so that it uses only the chapter structures from the examples.</p>
+<p>In this document, we have demonstrated a converter that transforms ODT documents created by <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><u><span style="color: #467886">LibreOffice</span></u></a> or DOCX documents from Word into a high-quality static HTML site.</p>
+<p>In the chapter [<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html"><u><span style="color: #467886">Examples in this document</span></u></a>], we presented the structures correctly handled by the Gemini/ChatGPT converter.</p>
+<p>We have also shown how to export the HTML sites created by the ODT and DOCX converters to GitHub (see the chapter <a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html"><u><span style="color: #467886">“Hosting the HTML Site on GitHub</span></u></a>”)</p>
+<p>Apart from the structures in the examples chapter, nothing is guaranteed. It is likely that the converter will display anomalies. You will then need to start a new chat with Gemini or ChatGPT to resolve these anomalies. The simplest approach is to provide the current converter to the AI along with its configuration file. Then ask the AI if it understands the code you’ve provided. This forces it to analyze the code. It will always respond that it fully understands the code. That’s when you should ask it for the desired changes. For both Word and LibreOffice, you can assist the AI with macros. The AI does not “see” the ODT or DOCX document being processed. It therefore lacks certain information. As a result, the DOCX-to-HTML converter couldn’t properly handle the numbering of rich code blocks. It couldn’t read the line number of the first line in a code block to render it in HTML. It always started the code at line 1, even if the code in the DOCX file started at line 12. So I used a macro to help. I placed the document cursor on the numbered line and asked ChatGPT to generate a VBA macro that would provide it with the characteristics of that line, enabling it to generate the HTML numbering correctly. ChatGPT did so, and I gave it the result of its macro. That solved the problem: the retrieved information showed it that the line number was being propagated by its style, not by the numbering icon. It then changed its algorithm, and it worked. So we can help AI make progress.</p>
+<p>Another, simpler approach is to modify your document. When the converter produces an error, try modifying your document so that it uses only the structures from the examples chapter.</p>
 
 
 
