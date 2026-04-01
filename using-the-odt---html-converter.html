@@ -821,7 +821,7 @@
 <span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p Style=&#x27;Standard&#x27; Text=&#x27;...&#x27;</span>
 <span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p Style=&#x27;Standard (WW)&#x27; Text=&#x27;...&#x27;</span>
 <span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p Style=&#x27;Standard (WW)&#x27; Text=&#x27;...&#x27;</span>
-<span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p <span style="background-color:#fff5ce">Style=&#x27;P1&#x27; Text=&#x27;Convert a Word or ODT document to a sta...</span>&#x27;</span>
+<span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p <span style="background-color:#fff5ce">Style=&#x27;P</span><span style="background-color:#fff5ce">4</span><span style="background-color:#fff5ce">&#x27; Text=&#x27;Convert a Word or ODT document to a sta...</span>&#x27;</span>
 <span class="odt-code-line">&gt;&gt;&gt; <span style="background-color:#fff5ce">DOCUMENT TITLE FOUND</span>: Convert a Word or ODT document to a MkDocs-compatible static HTML site using Gemini 3 and ChatGPT 5.2</span>
 <span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p Style=&#x27;P2&#x27; Text=&#x27;...&#x27;</span>
 <span class="odt-code-line">[DEBUG PRE-H1] Tag=text:p Style=&#x27;P2&#x27; Text=&#x27;...&#x27;</span>
@@ -900,18 +900,12 @@
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Document Title Detection</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;document_title&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ODT styles to be considered as the main document title (global H1)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">P1</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">        ],</span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># CSS applied to this heading in the generated Markdown</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;css&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span></span>
-<span class="odt-code-line">    },</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">STYLES = {</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">P4</span><span style="color:#a31515">&quot;</span></span>
+<span class="odt-code-line">    ]</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>

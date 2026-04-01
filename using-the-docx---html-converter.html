@@ -703,22 +703,16 @@
 
 <h1 id="9-using-the-docx-html-converter">9. <span style="color: #0f4761">Using the DOCX → HTML Converter</span></h1>
 <p>The command for converting a Word DOCX document is very similar to that for converting a LibreOffice ODT document. We will modify the document title style in [config.py]:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Document Title Detection</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;document_title&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ODT styles to be considered as the main document title (global H1)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">Title</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">        ],<span style="color:#000000"></span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># CSS applied to this title in the generated Markdown</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;css&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span></span>
-<span class="odt-code-line">    },</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">STYLES = {</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">Title</span><span style="color:#a31515">&quot;</span></span>
+<span class="odt-code-line">    ]</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-  <li>line 7: enter ‘Title’. This is the style of the DOCX document you are going to convert. We’ll see this in the converter’s debug logs.
+  <li>line 3: enter ‘Title’. This is the style of the DOCX document you are going to convert. We’ll see this in the converter’s debug logs.
   </li>
 </ul>
 
